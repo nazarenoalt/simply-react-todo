@@ -1,0 +1,12 @@
+.Searcher {
+  border: none;
+  padding:10px 15px;
+  border-radius: 100px;
+  font-size: 1rem;
+  background-color: var(--orange);
+  color: white;
+}
+
+.Searcher::placeholder {
+  color: white;
+}

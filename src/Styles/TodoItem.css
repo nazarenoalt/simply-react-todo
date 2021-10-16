@@ -1,0 +1,53 @@
+.Todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  border-bottom: 1px solid #d87d07;
+}
+
+.Todo-item div {
+  display: flex;
+  align-items: baseline;
+}
+.check-todo {
+  margin-right: 10px;
+}
+
+.check-todo:before {
+  display: block;
+  content: "";
+  background-image: url('../assets/svg/check-mark.svg');
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.green-filter {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+  transition: filter .1s;
+}
+
+.green-filter:hover {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(70%) contrast(119%);
+}
+
+.red-filter {
+  filter: invert(48%) sepia(79%) saturate(2476%) brightness(118%) contrast(119%);
+  transition: filter .1s;
+}
+
+.red-filter:hover {
+  filter: invert(48%) sepia(79%) saturate(2476%) brightness(70%) contrast(119%);
+}
+
+.cancel-todo:before {
+  display: block;
+  content: "";
+  background-image: url('../assets/svg/close.svg');
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+
