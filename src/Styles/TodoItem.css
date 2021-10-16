@@ -1,14 +1,14 @@
 .Todo-item {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   width: 100%;
   border-bottom: 1px solid #d87d07;
 }
 
 .Todo-item div {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 .check-todo {
   margin-right: 10px;
@@ -17,12 +17,20 @@
 .check-todo:before {
   display: block;
   content: "";
-  background-image: url('../assets/svg/check-mark.svg');
   background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: 40%;
   width: 20px;
   height: 20px;
+  border-radius: 100%;
+
+  border: 2px solid red;
 }
 
+.completed-task:before {
+  background-image: url('../assets/svg/check-mark.svg');
+
+}
 .green-filter {
   filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
   transition: filter .1s;

@@ -6,7 +6,7 @@ function TodoItem(props) {
     <React.Fragment>
       <li className="Todo-item">
         <div>
-          <span className="check-todo green-filter"></span>
+          <span className={`check-todo green-filter ${props.completed && 'completed-task'}`}></span>
           <p className="Todo-item__text">{props.text}</p>
         </div>
         <span className="cancel-todo red-filter"></span>
