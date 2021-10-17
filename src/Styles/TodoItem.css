@@ -5,6 +5,15 @@
   width: 100%;
   border-bottom: 1px solid #d87d07;
 }
+.Todo-item:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 90%;
+  height: 2px;
+  margin-top: 52px;
+  box-shadow: 0 0 10px rgba(0,0,0,1);
+}
 
 .Todo-item div {
   display: flex;
@@ -23,7 +32,6 @@
   width: 20px;
   height: 20px;
   border-radius: 100%;
-
   border: 2px solid red;
 }
 
