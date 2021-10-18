@@ -1,7 +1,7 @@
 import React from "react";
 import '../Styles/TodoSearch.css';
 
-function TodoSearch({ searchValue, setSearchValue, todoList }) {
+function TodoSearch({ searchValue, setSearchValue }) {
 
   const todoSearch = (event) => {
     setSearchValue(event.target.value);

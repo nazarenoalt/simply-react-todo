@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CreateTodoButton } from './Components/CreateTodoButton';
+import { ButtonPanel } from './Components/ButtonPanel';
 import { TodoCounter } from './Components/TodoCounter';
 import { TodoItem } from './Components/TodoItem';
 import { TodoList } from './Components/TodoList';
@@ -31,25 +31,44 @@ function App() {
     })
   }
 
+  const toggleTodosCheck = (todoID) => {
+    const index = todos.findIndex(todo => todo.id === todoID);
+    const newList = [...todos];
+    newList[index].completed = !newList[index].completed;
+    setTodos(newList);
+  };
+
+  const deleteTodo = (todoID) => {
+    const newList = todos.filter(todo => todo.id !== todoID)
+    setTodos(newList);
+  };
+
+  const deleteCompletedTodos = () => {
+    const newList = todos.filter(todo => todo.completed !== true);
+    setTodos(newList);
+  }
+
   return (
     <React.Fragment>
       <TodoCounter tasks={totalTodos} completedTasks={completedTodos}/>
       <TodoSearch
         searchValue={searchValue}
         setSearchValue={setSearchValue}
-        todoList={defaultTodos}
       />
       <TodoList>
-        
         {searchedTodos.map(todo => (
           <TodoItem
-            key={todo.id}
+            key={todo.text}
             text={todo.text}
             completed={todo.completed}
+            onCheck ={() => toggleTodosCheck(todo.id)}
+            onDelete ={() => deleteTodo(todo.id)}
           />
         ))}
       </TodoList>
-      <CreateTodoButton />
+      <ButtonPanel
+        deleteCompletedTodos={deleteCompletedTodos}
+      />
     </React.Fragment>
 
   );

@@ -1,0 +1,44 @@
+.Button-panel {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 10px;
+}
+.Create-todo {
+  width: 60px;
+  height: 60px;
+  border: none;
+  font-size: 3rem;
+  font-weight: bolder;
+  border-radius: 100%;
+  color: white;
+  background-color: var(--orange);
+  transition: filter .1s;
+}
+
+.Create-todo:hover {
+  filter: brightness(70%);
+}
+
+.Delete-todo {
+  height: 30px;
+  padding: 0 15px;
+  border: none;
+  font-size: .8rem;
+  font-weight: bolder;
+  border-radius: 100px;
+  color: white;
+  background-color: var(--orange);
+  transition: filter .1s;
+}
+
+.Delete-todo:hover {
+  filter: brightness(70%);
+}
+
