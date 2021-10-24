@@ -18,7 +18,7 @@ const TodoForm = () => {
   const onAddNewTodo = (event) => {
     event.preventDefault();
     createTodo(newTodoValue);
-    setOpenModal(prevState => !prevState);
+    setOpenModal(false);
   }
 
   return (

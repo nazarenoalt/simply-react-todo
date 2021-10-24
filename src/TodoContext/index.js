@@ -31,8 +31,18 @@ function TodoProvider(props) {
 
   const createTodo = (text) => {
     const newTodos = [...todos];
+    const verifyId = (id) => {
+      const todosWithCurrentId = todos.filter(todo => todo.id === id)
+      if(todosWithCurrentId.length > 0) {
+        return verifyId(id+1);
+      } else {
+        return id;
+      }
+    }
+
     newTodos.push({
       completed: false,
+      id: verifyId(todos.length+1),
       text,
     });
     saveTodos(newTodos);
