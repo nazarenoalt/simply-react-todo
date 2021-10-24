@@ -1,7 +1,12 @@
 import React from 'react';
-import '../Styles/ButtonPanel.css';
-
-function ButtonPanel({ deleteCompletedTodos, createTodoButton }) {
+import { TodoContext } from '../../TodoContext';
+import './ButtonPanel.css';
+function ButtonPanel() {
+  const { 
+    setOpenModal,
+    deleteCompletedTodos,
+  } = React.useContext(TodoContext);
+  
   return (
     <div className="Button-panel">
       <button 
@@ -13,7 +18,7 @@ function ButtonPanel({ deleteCompletedTodos, createTodoButton }) {
       <button
         type="button"
         className="Create-todo"
-        onClick={createTodoButton}
+        onClick={() => setOpenModal(prevState => !prevState)}
       >+</button>
     </div>
   )

@@ -36,7 +36,7 @@
 }
 
 .completed-task:before {
-  background-image: url('../assets/svg/check-mark.svg');
+  background-image: url('../../assets/svg/check-mark.svg');
 
 }
 .green-filter {
@@ -60,7 +60,7 @@
 .cancel-todo:before {
   display: block;
   content: "";
-  background-image: url('../assets/svg/close.svg');
+  background-image: url('../../assets/svg/close.svg');
   background-repeat: no-repeat;
   width: 30px;
   height: 30px;
