@@ -7,6 +7,9 @@ import { TodoItem } from '../../Components/TodoItem';
 import { TodoList } from '../../Components/TodoList';
 import { TodoSearch } from '../../Components/TodoSearch';
 import { TodoForm } from '../../Components/TodoForm';
+import { TodosEmpty } from '../../Components/TodosEmpty';
+import { TodosError } from '../../Components/TodosError';
+import { TodosLoading } from '../../Components/TodosLoading';
 
 function AppUI() {
   const {
@@ -23,16 +26,19 @@ function AppUI() {
         <TodoCounter />
         <TodoSearch />
           <TodoList>
-            {error && <p className="p-warn">Hubo un error con los datos, espera unos instantes y prueba recargar la página</p>}
-            {loading && <p className="p-notification">Cargando lista, aguantá un toque...</p>}
-            {(!loading && !searchedTodos.length) && <p className="p-notification">¡Tu lista está vacia! crea tu primer tarea</p>}
+            {error && <TodosError error={error}/>}
+            {loading && 
+            new Array(10).fill().map((item, index)=>(
+              <TodosLoading key={index} />
+))}
+            {(!loading && !searchedTodos.length) && <TodosEmpty />}
             {searchedTodos.map(todo => (
               <TodoItem
                 key={todo.text}
                 text={todo.text}
                 completed={todo.completed}
-                onCheck ={() => toggleTodosCheck(todo.id)}
-                onDelete ={() => deleteTodo(todo.id)}
+                onCheck={() => toggleTodosCheck(todo.id)}
+                onDelete={() => deleteTodo(todo.id)}
               />
             ))}
           </TodoList>

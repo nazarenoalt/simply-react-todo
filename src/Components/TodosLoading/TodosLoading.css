@@ -1,0 +1,82 @@
+
+.Todo-skeleton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  opacity: 30%;
+  margin-bottom: 10px;
+}
+.Todo-skeleton:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 90%;
+  height: 2px;
+  margin-top: 52px;
+  
+}
+
+.check-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  
+}
+
+.skeleton__check-todo {
+  border-radius: 100%;
+}
+.skeleton__check-todo:before {
+  display: block;
+  content: "";
+  background-color: var(--dark-gray);
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: 40%;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+
+.skeleton__orange-filter {
+  filter: invert(48%) sepia(79%) saturate(2476%) brightness(118%) contrast(119%);
+  transition: filter .1s;
+}
+
+.skeleton__cancel-todo:before {
+  display: block;
+  content: "";
+  background-image: url('../../assets/svg/close.svg');
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.Todo-skeleton:before,
+.check-container {
+  background: linear-gradient(90deg, rgb(143, 142, 140) 35%, rgba(216,87,7,1) 100%);
+  background-size: 400% 400%;
+  animation: LoadingAnimation 2s ease-in-out infinite;
+}
+
+@keyframes LoadingAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

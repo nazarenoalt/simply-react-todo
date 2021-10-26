@@ -31,6 +31,11 @@ function TodoProvider(props) {
 
   const createTodo = (text) => {
     const newTodos = [...todos];
+    const lowerCaseTodos = todos.map(todo => todo.text.toLowerCase())
+
+    if(lowerCaseTodos.indexOf(text.toLowerCase()) !== -1) {
+      return alert ('El todo ya existe')
+    }
     const verifyId = (id) => {
       const todosWithCurrentId = todos.filter(todo => todo.id === id)
       if(todosWithCurrentId.length > 0) {

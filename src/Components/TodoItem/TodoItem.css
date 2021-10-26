@@ -4,6 +4,7 @@
   align-items: center;
   width: 100%;
   border-bottom: 1px solid #d87d07;
+  margin-bottom: 10px;
 }
 .Todo-item:before {
   position: absolute;
@@ -39,6 +40,11 @@
   background-image: url('../../assets/svg/check-mark.svg');
 
 }
+
+.Todo-item__text {
+  padding: 0px 10px;
+}
+
 .green-filter {
   filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
   transition: filter .1s;

@@ -1,0 +1,29 @@
+.Icon-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+}
+
+.Icon-container__check {
+  border: 2px solid var(--green);
+  border-radius: 100%;
+  padding: 3px;
+}
+
+.Icon-container__delete {
+  width: 30px;
+  height: 30px;
+}
+
+.Icon-svg__delete {
+  width: 40px;
+  height: 40px;
+}
+
+
+.Icon-container:hover {
+  opacity: 70%;
+}

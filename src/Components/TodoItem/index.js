@@ -1,21 +1,24 @@
 import React from "react";
 import './TodoItem.css';
+import { CompleteIcon } from '../TodoIcon/CompleteIcon';
+import { DeleteIcon } from '../TodoIcon/DeleteIcon';
 
-function TodoItem(props) {
+function TodoItem({ completed, onCheck, text, onDelete }) {
   return(
     <React.Fragment>
       <li className="Todo-item">
         <div>
-          <span 
-            className={`check-todo green-filter ${props.completed && 'completed-task'}`}
-            onClick={props.onCheck}
-          ></span>
-          <p className="Todo-item__text">{props.text}</p>
+          <CompleteIcon 
+            className={`check-todo green-filter ${completed && 'completed-task'}`}
+            completed={completed}
+            onComplete={onCheck}
+          />
+          <p className="Todo-item__text">{text}</p>
         </div>
-        <span 
+        <DeleteIcon 
           className="cancel-todo red-filter"
-          onClick={props.onDelete}
-        ></span>
+          onDelete={onDelete}
+        />
       </li>
     </React.Fragment>
   )
