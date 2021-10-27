@@ -25,5 +25,5 @@
 
 
 .Icon-container:hover {
-  opacity: 70%;
+  filter:brightness(70%)
 }
