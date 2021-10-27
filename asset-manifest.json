@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/simply-react-todo/static/css/main.120f0722.chunk.css",
+    "main.css": "/simply-react-todo/static/css/main.fe0b54bf.chunk.css",
     "main.js": "/simply-react-todo/static/js/main.a6bffa20.chunk.js",
     "main.js.map": "/simply-react-todo/static/js/main.a6bffa20.chunk.js.map",
     "runtime-main.js": "/simply-react-todo/static/js/runtime-main.2508672e.js",
@@ -8,15 +8,15 @@
     "static/js/2.9f80f512.chunk.js": "/simply-react-todo/static/js/2.9f80f512.chunk.js",
     "static/js/2.9f80f512.chunk.js.map": "/simply-react-todo/static/js/2.9f80f512.chunk.js.map",
     "index.html": "/simply-react-todo/index.html",
-    "static/css/main.120f0722.chunk.css.map": "/simply-react-todo/static/css/main.120f0722.chunk.css.map",
+    "static/css/main.fe0b54bf.chunk.css.map": "/simply-react-todo/static/css/main.fe0b54bf.chunk.css.map",
     "static/js/2.9f80f512.chunk.js.LICENSE.txt": "/simply-react-todo/static/js/2.9f80f512.chunk.js.LICENSE.txt",
-    "static/media/TodoItem.css": "/simply-react-todo/static/media/check-mark.8653311f.svg",
+    "static/media/check-mark.8653311f.svg": "/simply-react-todo/static/media/check-mark.8653311f.svg",
     "static/media/TodosLoading.css": "/simply-react-todo/static/media/close.bb8b6a19.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2508672e.js",
     "static/js/2.9f80f512.chunk.js",
-    "static/css/main.120f0722.chunk.css",
+    "static/css/main.fe0b54bf.chunk.css",
     "static/js/main.a6bffa20.chunk.js"
   ]
 }
