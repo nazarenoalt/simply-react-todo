@@ -20,56 +20,7 @@
   display: flex;
   align-items: center;
 }
-.check-todo {
-  margin-right: 10px;
-}
-
-.check-todo:before {
-  display: block;
-  content: "";
-  background-repeat: no-repeat;
-  background-size: 15px 15px;
-  background-position: 40%;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  border: 2px solid red;
-}
-
-.completed-task:before {
-  background-image: url('../../assets/svg/check-mark.svg');
-
-}
 
 .Todo-item__text {
   padding: 0px 10px;
 }
-
-.green-filter {
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
-  transition: filter .1s;
-}
-
-.green-filter:hover {
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(70%) contrast(119%);
-}
-
-.red-filter {
-  filter: invert(48%) sepia(79%) saturate(2476%) brightness(118%) contrast(119%);
-  transition: filter .1s;
-}
-
-.red-filter:hover {
-  filter: invert(48%) sepia(79%) saturate(2476%) brightness(70%) contrast(119%);
-}
-
-.cancel-todo:before {
-  display: block;
-  content: "";
-  background-image: url('../../assets/svg/close.svg');
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
-}
-
-
